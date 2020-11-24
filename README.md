@@ -1,3 +1,3 @@
-This is my first todo list.
+## This is my first todo list.
 
-Link: https://marcinprzytula.github.io/Todo-list/
+# Live [here](https://marcinprzytula.github.io/Todo-list/)
