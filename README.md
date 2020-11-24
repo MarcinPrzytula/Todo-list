@@ -1,4 +1,4 @@
-This is my todo list with array.
+This is my first todo list.
 
 Link: https://raven325.github.io/Todo-list-with-array/
 
