@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    user-select: none;
+
+}
+
+.wrap {
+    position: relative;
+    z-index: 0;
+    font-size: 20px;
+    border: 1px solid gray;
+    width: 95vw;
+    margin: 10px auto;
+    text-align: center;
+    min-height: 20vh;
+    background-color: rgb(214, 213, 213);
+}
+
+.wrap input {
+    width: 80%;
+    height: 30px;
+}
+
+.wrap button {
+    width: 90px;
+    height: 30px;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    transition: .2s;
+    cursor: pointer;
+    border-radius: 15%
+}
+
+.wrap button:hover {
+    color: white;
+    background-color: black;
+}
+
+.wrap ul>li {
+    list-style: none;
+}
+
+button.delete {
+    width: 65px;
+    height: 25px;
+    font-size: 12px;
+}
+
+button.edit {
+    width: 60px;
+    height: 25px;
+    font-size: 12px;
+}
+
+button.done {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+}
+
+.btnEditSave {
+    width: 60px;
+    height: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    transition: .2s;
+    cursor: pointer;
+    border-radius: 15%
+}
+
+.btnEditSave:hover {
+    color: white;
+    background-color: black;
+}
+
+.editInputBox {
+    position: fixed;
+    z-index: 1;
+    visibility: hidden;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.activeEditInputBox {
+    visibility: visible;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapEditInputBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    background-color: rgb(226, 222, 222);
+    width: 30%;
+    height: 30%;
+}
+
+.wrapEditInputBox form {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.wrapEditInputBox input {
+    width: 70%;
+}
+
+.wrapEditInputBox .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px;
+    border: 1px solid black;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.wrapEditInputBox .close:hover {
+    background-color: black;
+    color: white;
+}
+
+body.blur>*:not(#lolo) {
+    filter: blur(3px);
+}
+
+.throught {
+    text-decoration: line-through;
+}
+
+.searchWrap {
+    position: relative;
+    z-index: 0;
+    margin-top: 100px;
+}
+
+.searchBox {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    padding: 20px 0;
+    border: 1px solid black;
+    margin: 0 auto;
+
+}
+
+.searchBox input {
+    width: 70%;
+}
