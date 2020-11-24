@@ -12,6 +12,7 @@
     font-size: 20px;
     border: 1px solid gray;
     width: 95vw;
+    max-width: 1200px;
     margin: 10px auto;
     text-align: center;
     min-height: 20vh;
@@ -115,58 +116,63 @@ button.done {
     height: 30%;
 }
 
-.wrapEditInputBox form {
-    width: 100%;
-    margin: 20px 0;
-    text-align: center;
-}
+@media (max-width: 768px) {
+    .wrapEditInputBox {
+        width: 80%;
+    }
 
-.wrapEditInputBox input {
-    width: 70%;
-}
+    .wrapEditInputBox form {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
 
-.wrapEditInputBox .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 3px;
-    border: 1px solid black;
-    transition: .3s;
-    cursor: pointer;
-}
+    .wrapEditInputBox input {
+        width: 70%;
+    }
 
-.wrapEditInputBox .close:hover {
-    background-color: black;
-    color: white;
-}
+    .wrapEditInputBox .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 3px;
+        border: 1px solid black;
+        transition: .3s;
+        cursor: pointer;
+    }
 
-body.blur>*:not(#lolo) {
-    filter: blur(3px);
-}
+    .wrapEditInputBox .close:hover {
+        background-color: black;
+        color: white;
+    }
 
-.throught {
-    text-decoration: line-through;
-}
+    body.blur>*:not(#lolo) {
+        filter: blur(3px);
+    }
 
-.searchWrap {
-    position: relative;
-    z-index: 0;
-    margin-top: 100px;
-}
+    .throught {
+        text-decoration: line-through;
+    }
 
-.searchBox {
-    display: flex;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50vw;
-    padding: 20px 0;
-    border: 1px solid black;
-    margin: 0 auto;
+    .searchWrap {
+        position: relative;
+        z-index: 0;
+        margin-top: 100px;
+    }
 
-}
+    .searchBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        max-width: 800px;
+        padding: 20px 0;
+        border: 1px solid black;
+        margin: 0 auto;
 
-.searchBox input {
-    width: 70%;
-}
+    }
+
+    .searchBox input {
+        width: 70%;
+    }

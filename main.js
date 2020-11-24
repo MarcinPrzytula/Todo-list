@@ -33,9 +33,8 @@ const editTask = (e) => {
     popupBlur();
     editInput.value = "";
     actuallyLi = e.target.parentNode.querySelector("span")
-
-
 }
+
 btnEditSave.addEventListener("click", (e) => {
     e.preventDefault();
 
