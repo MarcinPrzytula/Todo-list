@@ -7,15 +7,28 @@ const btnEditSave = document.querySelector(".editInputBox button");
 const btnEditClose = document.querySelector(".editInputBox .close");
 
 const searchInput = document.querySelector(".searchBox input");
-
-let actuallyLi = "";
+const btnSearch = document.querySelector(".searchBox .search");
+const btnShowAll = document.querySelector(".searchBox .showAll");
 
 const allLi = [];
 
+let actuallyLi = "";
+let tasks = "";
 
-const searchTask = () => {
-    let tasks = allLi.filter(li => li.textContent.toLowerCase().includes(searchInput.value.toLowerCase()))
+
+
+
+
+const searchTask = (e) => {
+    e.preventDefault();
+    tasks = allLi.filter(li => li.querySelector("span").textContent.toLowerCase().includes(searchInput.value.toLowerCase()))
     ul.textContent = "";
+    tasks.forEach(li => ul.appendChild(li))
+}
+const showAllTasks = (e) => {
+    e.preventDefault();
+    searchInput.value = "";
+    tasks = allLi;
     tasks.forEach(li => ul.appendChild(li))
 }
 
@@ -105,4 +118,6 @@ const addTask = (e) => {
 }
 
 form.addEventListener("submit", addTask);
-searchInput.addEventListener("input", searchTask);
+// searchInput.addEventListener("input", searchTask);
+btnSearch.addEventListener("click", searchTask);
+btnShowAll.addEventListener("click", showAllTasks);
