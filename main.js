@@ -21,7 +21,7 @@ let tasks = "";
 
 const searchTask = (e) => {
     e.preventDefault();
-    tasks = allLi.filter(li => li.querySelector("span").textContent.toLowerCase().includes(searchInput.value.toLowerCase()))
+    tasks = allLi.filter(li => li.querySelector("span").textContent.toLowerCase().trim().includes(searchInput.value.toLowerCase().trim()))
     ul.textContent = "";
     tasks.forEach(li => ul.appendChild(li))
 }
