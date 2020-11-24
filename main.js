@@ -42,7 +42,7 @@ btnEditSave.addEventListener("click", (e) => {
     if (editInput.value.length) {
         for (const li of allLi) {
             if (li.querySelector("span").textContent.trim() === editInput.value.trim()) {
-                alert("To już jest!");
+                alert("This task is already here!");
                 return;
             }
         }
