@@ -1,6 +1,7 @@
 const form = document.querySelector(".wrap form");
 const input = document.querySelector(".wrap input");
 const ul = document.querySelector(".wrap ul");
+const counterTasks = document.querySelector(".wrap h3>span");
 
 const editInput = document.querySelector(".editInputBox input");
 const btnEditSave = document.querySelector(".editInputBox button");
@@ -16,20 +17,17 @@ let actuallyLi = "";
 let tasks = "";
 
 
-
-
-
 const searchTask = (e) => {
     e.preventDefault();
     tasks = allLi.filter(li => li.querySelector("span").textContent.toLowerCase().trim().includes(searchInput.value.toLowerCase().trim()))
     ul.textContent = "";
     tasks.forEach(li => ul.appendChild(li))
 }
+
 const showAllTasks = (e) => {
     e.preventDefault();
     searchInput.value = "";
-    tasks = allLi;
-    tasks.forEach(li => ul.appendChild(li))
+    render();
 }
 
 const doneTask = (e) => {
@@ -42,7 +40,6 @@ const popupBlur = () => {
 }
 
 const editTask = (e) => {
-
     popupBlur();
     editInput.value = "";
     actuallyLi = e.target.parentNode.querySelector("span")
@@ -62,8 +59,8 @@ btnEditSave.addEventListener("click", (e) => {
         alert("Enter the name of the task");
         return
     }
-    popupBlur();
 
+    popupBlur();
     actuallyLi.textContent = editInput.value;
 });
 
@@ -85,6 +82,7 @@ const render = () => {
         li.dataset.index = index;
         ul.appendChild(li);
     })
+    counterTasks.textContent = allLi.length;
 }
 
 const addTask = (e) => {
@@ -118,6 +116,5 @@ const addTask = (e) => {
 }
 
 form.addEventListener("submit", addTask);
-// searchInput.addEventListener("input", searchTask);
 btnSearch.addEventListener("click", searchTask);
 btnShowAll.addEventListener("click", showAllTasks);

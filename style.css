@@ -180,3 +180,7 @@ body.blur>*:not(#lolo) {
     width: 90%;
     margin: 10px 0;
 }
+
+.wrap h3>span {
+    color: green
+}
